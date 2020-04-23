@@ -1,16 +1,18 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Weather = () => {
+const Weather = ({
+  weather: { name }
+}) => {
   return (
     <div className="weather">
-      <h1>Weather</h1>
+      <h1>{name}</h1>
     </div>
   )
 }
 
-// Weather.propTypes = {
-
-// }
+Weather.propTypes = {
+  weather: PropTypes.object
+}
 
 export default Weather;

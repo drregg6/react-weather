@@ -8,24 +8,25 @@ import Search from './components/search/Search';
 import Weather from './components/weather/Weather';
 
 function App() {
-  const [ test, setTest ] = useState({})
+  const [ weather, setWeather ] = useState({})
   useEffect(() => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=${process.env.REACT_APP_WEATHER_API}`;
     console.log(url)
-    let res = axios.get(url);
-
-    console.log(res)
-    setTest({...res.data})
+    axios.get(url)
+    .then(res => {
+      setWeather({...res.data});
+    })
+    .catch(err => {
+      console.error(err);
+    });
   }, []);
-
-
-  console.log(test)
+  
   return (
     <div className="container">
       <Header />
       <div className="main">
         <Search />
-        <Weather />
+        <Weather weather={weather} />
       </div>
       <Footer />
     </div>
