@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="weather-footer justify-center">
       <p>
         Created, coded, and maintained by: <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer">Dave Regg</a>
       </p>

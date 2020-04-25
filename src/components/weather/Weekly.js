@@ -19,7 +19,7 @@ const Weekly = ({ daily }) => {
   )
 
   return (
-    <div className="weekly">
+    <div className="weekly flex flex-center">
       {weekly}
     </div>
   )

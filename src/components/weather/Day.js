@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
 const Day = ({day, idx}) => {
-  console.log(day)
+  // console.log(day)
   const { dt, feels_like, temp, weather } = day
   const feelsLikeTemp = Math.floor(feels_like.day);
   const highTemp = Math.floor(temp.max);

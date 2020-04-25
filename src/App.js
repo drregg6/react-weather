@@ -1,6 +1,7 @@
 /*
 
 TODO:
+= Toggling F to C
 = Setup a couple of APIs (if available)
     - Search for user's location when they enter the site
     - Allow user to search for city, then use that city name to get lat/long

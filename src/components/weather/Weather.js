@@ -6,11 +6,11 @@ import Weekly from './Weekly';
 const Weather = ({ weather }) => {
 
   const { current, daily, hourly } = weather;
-  // console.log('From Weather:')
-  // console.log(weather)
-  // console.log(current)
+  console.log('From Weather:')
+  console.log(weather)
+  console.log(current)
   // console.log(daily)
-  // console.log(hourly)
+  console.log(hourly)
 
   return (
     <div className="weather">

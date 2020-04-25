@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header>
+    <header className="weather-header justify-center">
       <h1>Weather App</h1>
       <p>
         Please add how to use the app here.
