@@ -9,6 +9,22 @@ TODO:
     - Click on a day to get full information?
 = New tech
     - Tailwind?
+= Geolocation API -> CORS issue
+  ###
+  useEffect(() => {
+    const geoUrl = `https://api.ipgeolocationapi.com/geolocate`;
+    axios.get(geoUrl)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.error(err);
+    })
+  }, []);
+  ###
+= Endpoint for current weather
+  - `https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=${process.env.REACT_APP_WEATHER_API}`
+
 
 */
 
@@ -23,9 +39,9 @@ import Weather from './components/weather/Weather';
 
 function App() {
   const [ weather, setWeather ] = useState({})
+
   useEffect(() => {
     const altUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=39.95&lon=-75.16&appid=${process.env.REACT_APP_WEATHER_API}&units=imperial`;
-    // const url = `https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=${process.env.REACT_APP_WEATHER_API}`;
     console.log(altUrl)
     axios.get(altUrl)
     .then(res => {
