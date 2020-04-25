@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Spinner from '../layout/Spinner';
 import Day from './Day';
 
 const Weekly = ({ daily }) => {
   const weekly = !daily ? (
-    <h1>Loading</h1>
+    <Spinner />
   ) : (
     <>
       {
