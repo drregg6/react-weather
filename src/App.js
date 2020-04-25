@@ -10,20 +10,23 @@ TODO:
 = New tech
     - Tailwind?
 = Geolocation API -> CORS issue
-  ###
-  useEffect(() => {
-    const geoUrl = `https://api.ipgeolocationapi.com/geolocate`;
-    axios.get(geoUrl)
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => {
-      console.error(err);
-    })
-  }, []);
-  ###
+    ###
+    useEffect(() => {
+      const geoUrl = `https://api.ipgeolocationapi.com/geolocate`;
+      axios.get(geoUrl)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+    }, []);
+    ###
 = Endpoint for current weather
-  - `https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=${process.env.REACT_APP_WEATHER_API}`
+    - `https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=${process.env.REACT_APP_WEATHER_API}`
+= Implement Search
+    - import Search from './components/search/Search';
+    - <Search />
 
 
 */
@@ -34,7 +37,6 @@ import axios from 'axios';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
-import Search from './components/search/Search';
 import Weather from './components/weather/Weather';
 
 function App() {
@@ -56,7 +58,6 @@ function App() {
     <div className="container">
       <Header />
       <div className="main">
-        <Search />
         <Weather weather={weather} />
       </div>
       <Footer />
